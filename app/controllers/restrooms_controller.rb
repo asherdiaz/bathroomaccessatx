@@ -89,7 +89,10 @@ private
       :directions,
       :comment,
       :longitude,
-      :latitude
+      :latitude,
+      :is_singleGendered,
+      :is_singleNeutral,
+      :is_multipleFriendly
     )
   end
 end

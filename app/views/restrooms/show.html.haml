@@ -22,11 +22,25 @@
     .col-xs-12
 
       %p
-        %strong #{t('restrooom.directions')}:
-        = @restroom.directions
+        %strong #{t('restroom.available_bathroom_types')}:
+        %br
+        - if @restroom.is_singleGendered
+          = Restroom::IS_SINGLEGENDERED
+          %br
+        - if @restroom.is_singleNeutral
+          = Restroom::IS_SINGLENEUTRAL
+          %br
+        - if @restroom.is_multipleFriendly
+          = Restroom::IS_MULTIPLEFRIENDLY
+          %br
       %p
-        %strong #{t('restroom.comments')}:
-        = @restroom.comment
+        - if @restroom.directions != ''
+          %strong #{t('restrooom.directions')}:
+          = @restroom.directions
+      %p
+        - if @restroom.comment != ''
+          %strong #{t('restroom.comment')}:
+          = @restroom.comment
       %p= link_to t('restroom.contact.contactlisting'), contact_path(restroom_id: @restroom.id, restroom_name: @restroom.name)
   .row
     .col-xs-12

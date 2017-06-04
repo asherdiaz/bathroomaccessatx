@@ -4,6 +4,9 @@
 
 class Restroom < ApplicationRecord
 
+  IS_SINGLEGENDERED = 'Single Occupancy, Gender Specific'
+  IS_SINGLENEUTRAL = 'Single Occupancy, Gender Neutral'
+  IS_MULTIPLEFRIENDLY = 'Multiple Occupancy, Gender Neutral'
   include PgSearch
   pg_search_scope :search, against: {
     :name => 'A',

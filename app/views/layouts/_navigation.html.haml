@@ -13,7 +13,14 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li= link_to "Submit a New Restroom", new_restroom_path
-            %li= link_to 'About', page_path('about')
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                About
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                %li= link_to 'Bathroom Access ATX', page_path('atx')
+                %li= link_to 'About REFUGE', page_path('about')
             %li= link_to 'Contact', contact_path
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -21,6 +28,7 @@
                 %b.caret
               %ul.dropdown-menu
                 %li
+                %li= link_to 'Take Action Austin!', page_path('action')
                 %li= link_to 'Download Unisex Restroom Signs', page_path('signs')
                 %li= link_to 'Public API', '/api/docs/'
         / /.navbar-collapse

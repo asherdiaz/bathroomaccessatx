@@ -40,6 +40,12 @@ input {
     border-radius: 0;
 }
 
+input[type='checkbox'] {
+    -webkit-appearance: checkbox;
+	width:initial;
+	height:initial;
+}
+
 h1 {
     padding: 5px;
     text-align: center;
@@ -78,7 +84,7 @@ h1 {
 .toiletLogo {
     width: 45px;
     height: 45px;
-    background: asset-url("logo-100x100.png");
+    background: asset-url("logo-100x100.svg");
     background-size: 100% 100%;
     position: relative;
     float: left;

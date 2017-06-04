@@ -4,7 +4,7 @@
 # It requires the RefugeRestrooms lib geocoder.
 
 class Refuge.Restrooms.Search
-  searchDefaultText: "1 Embarcadero Center, San Francisco, CA"
+  searchDefaultText: "100 Congress Avenue, Austin, TX"
 
   constructor: (form) ->
     # Define elements that will be in use in this class.
